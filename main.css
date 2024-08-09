@@ -1,0 +1,86 @@
+html{
+  width: 100%;
+  
+}
+
+.main{
+  width: 100%;
+
+}
+.main-conteudo {
+  display: grid;
+  margin-top: 3rem;
+}
+.swiper {
+  width: 70%;
+  height: fit-content;
+  
+}
+
+.swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  
+}
+.main-nome {
+  display: grid;
+  justify-self: start;
+  margin-left: 8.75rem;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 350;
+  font-size: 4.62rem;
+  color: #141414;
+  position: relative;
+}
+
+.main-nome::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("./img/Group7.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 15px;
+  left: -40px;
+  z-index: -1;
+}
+
+.main-titulo {
+  margin-left: 8.75rem;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 3.87rem;
+  max-width: 23ch;
+  color: #7b52d2;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+  animation-duration: 3.5s;
+  animation-name: slide-right;
+}
+
+.main-projetos {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  padding: 0.96rem 4.5rem;
+  background: #7b52d2;
+  border: 2px solid #794ed4;
+  border-radius: 4px;
+  color: #cdcdcd;
+  place-self: center;
+  margin-top: 3.125rem;
+  letter-spacing: 1.3px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  animation-name: slide-right;
+}
+
+.main-projetos:hover {
+  background: #9066eb;
+
+  color: #e6e6e6;
+}

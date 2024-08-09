@@ -1,0 +1,263 @@
+@import "./global.css";
+@import "./header.css";
+@import "./projetos.css";
+@import "./footer.css";
+@import "./main.css";
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,600;1,9..40,100&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,600;1,9..40,100&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+html {
+  display: grid;
+  max-width: 100%;
+  scroll-behavior: smooth;
+}
+
+.conteudo-sobre {
+  background: #eaeaea;
+  margin-top: 12rem;
+  padding-left: 8.75rem;
+  display: grid;
+  border: 1px solid transparent;
+}
+
+.conteudo-sobre_grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.conteudo-sobre img {
+  background: #ededed;
+  grid-column: 2;
+  display: grid;
+  width: 15rem;
+  justify-self: center;
+  position: relative;
+  border-radius: 30%;
+}
+
+.conteudo-titulo {
+  color: #141414;
+  font-size: 3.65rem;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 6.5rem;
+  padding-top: 3.75rem;
+  padding-bottom: 2rem;
+}
+
+.projeto-descricao{
+  color: #313131;
+  font-size: 1.75rem;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.projeto-titulo{
+  color: #141414;
+  font-size: 3.65rem;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 6.5rem;
+  padding-top: 3.75rem;
+}
+
+.container-texto-sobre {
+  display: grid;
+  grid-row: 1;
+  text-align: left;
+}
+.texto-sobre {
+  color: #313131;
+  font-size: 1.75rem;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.conteudo-tecnologia {
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  margin-top: 4.5rem;
+  padding-bottom: 8rem;
+}
+
+.lista-tecnologia-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  gap: 0.1rem 6.2rem;
+}
+
+.lista-tecnologia-container {
+  display: grid;
+  width: 28rem;
+}
+
+.tecnologia-titulo {
+  display: grid;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  margin-bottom: 0.5 rem;
+  text-align: center;
+  position: relative;
+  letter-spacing: 0.5px;
+  color: #505050;
+}
+
+.tecnologia-titulo::before {
+  content: "";
+  width: 25rem;
+  height: 1.1px;
+  background: url("./img/Rectangle29.svg");
+  display: block;
+  position: absolute;
+  top: -25px;
+  left: 30px;
+}
+.conteudo-sobre h1::before {
+  content: "";
+  display: block;
+  width: 33px;
+  height: 100px;
+  background: url("./img/Rectangle30.svg");
+  opacity: 85%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 140px;
+  left: 190px;
+}
+
+.conteudo-titulo {
+  position: relative;
+  display: grid;
+}
+
+.icon-lista {
+  font-size: 1rem;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.titulo-lista {
+  display: flex;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  padding: 0.1rem 0rem;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+}
+
+.icon-html {
+  display: grid;
+  height: 1.8rem;
+  max-width: 2rem;
+  padding: 0px;
+  margin: 0px;
+}
+
+@media (max-width: 810px) {
+  html{
+    width:100vh;
+  }
+  .texto-sobre{
+    padding: 0rem 2rem;
+  }
+  
+  .main-nome,
+  .main-titulo {
+    margin-left: 2rem;
+    font-size: 3rem;
+  }
+  .projeto-titulo{
+    font-size: 3.2rem;
+  }
+  .conteudo-titulo{
+    font-size: 3.2rem;
+  }
+  .conteudo-sobre_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .conteudo-sobre {
+    padding-left: 0rem;
+  }
+
+  .conteudo-sobre h1 {
+    text-align: center;
+    position: relative;
+  }
+
+  .conteudo-sobre h1::before {
+    top: 140px;
+    left: 365px;
+  }
+
+  .projetos-sobre h1::before {
+    left: 314px;
+  }
+
+  .conteudo-sobre img {
+    grid-row: 1;
+    grid-column: 1;
+    padding-bottom: 3rem;
+    width: 300px;
+    box-shadow: 0px 1.44275px 5.77099px 0px rgba(0, 0, 0, 0.01);
+  }
+
+  .container-texto-sobre {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    padding: 2.1rem;
+  }
+
+  .lista-tecnologia-grid {
+    gap: 0rem 4rem;
+    font-size: 4rem;
+  }
+
+  .tecnologia-titulo {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .titulo-lista {
+    font-size: 1.7rem;
+  }
+
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projetos-conteudo-container {
+    grid-column: 1;
+  }
+
+  .projetos-sobre {
+    padding: 2rem;
+    background: none;
+  }
+
+  .projetos-conteudo-container a {
+    place-self: center;
+  }
+  .projetos-sobre h1::before {
+    left: 31px;
+  }
+  .projetos-sobre h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 710px) {
+  .projetos-sobre h1::before {
+    left: 225px;
+  }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+</head>
+
+
+<body>
+
+  <header class="header">
+    <nav>
+      <ul class="header-menu">
+        <li><a href="#sobre">Habilidades</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="main-section">
+      <div class="main-conteudo" data-aos="flip-left">
+        <h1 class="main-nome">Ruan de Melo Prado</h1>
+        <h2 class="main-titulo">Front-end</h2>
+        <a href="#projetos" class="main-projetos">PROJETOS</a>
+      </div>
+    </section>
+
+    <article class="conteudo-sobre">
+      <h1 class="conteudo-titulo">Quem sou eu?</h1>
+      <div class="conteudo-sobre_grid">
+        <img src="img/foto.jpg" alt="Foto" class="conteudo-imagem">
+        <div class="container-texto-sobre" id="sobre">
+          <p class="texto-sobre">Sou um entusiasta de tecnologia e inovação, em busca de oportunidades para desenvolver minhas habilidades como desenvolvedor. Venho me dedicando recentemente a área de front-end, e aqui você pode acompanhar um pouco do decorrer desse processo de aprendizado. Neste portfólio, trago alguns projetos em algumas das linguagens que estudei, desde desenvolvimento web até backend com PHP e Laravel. Ao longo de minha jornada como estagiário de TI, tive a oportunidade de trabalhar em equipe, aprender com mentores experientes e me dedicar a aprimorar minhas habilidades de resolução de problemas e comunicação em ambiente de equipe. Estou ansioso para contribuir com novas ideias e desenvolver soluções criativas em um ambiente desafiador, que me proporcione as experiências de desenvolvimento e todo o conhecimento que a área proporciona. </p>
+          <br><br>
+          <p class="texto-sobre"></p>
+
+        </div>
+
+      </div>
+
+
+      <article class="conteudo-tecnologia">
+        <div class="lista-tecnologia-container">
+          <h2 class="tecnologia-titulo">TECNOLOGIAS</h2>
+          <ul class="lista-tecnologia-grid">
+            <li class="icon-lista">
+              <img src="img/html.svg" alt="HTML" class="icon-html">
+              <p class="titulo-lista">HTML5</p>
+            <li class="icon-lista">
+              <img src="img/laravel.svg" alt="Laravel" class="icon-html">
+              <p class="titulo-lista">Laravel</p>
+            <li class="icon-lista">
+              <img src="img/css.svg" alt="CSS" class="icon-html">
+              <p class="titulo-lista">CSS3</p>
+            <li class="icon-lista">
+              <img src="img/java.png" alt="php" class="icon-html">
+              <p class="titulo-lista">Java </p>
+            <li class="icon-lista">
+              <img src="img/js.svg" alt="Javscript" class="icon-html">
+              <p class="titulo-lista">JavaScript</p>
+            <li class="icon-lista">
+              <img src="mySQL.svg" alt="HTML" class="icon-html">
+              <p class="titulo-lista">MySQL</p>
+          </ul>
+        </div>
+      </article>
+
+    </article>
+
+    <article class="projetos-sobre">
+      <h1 class="conteudo-titulo">Projetos</h1>
+      <div class="projetos-grid" id="projetos">
+       
+        <div class="projetos-conteudo-container">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><a href="https://calcula99.vercel.app/"><img class="swiper-img" src='./img/calcula99.png'/></a> <br> <b class="titulo-projeto">Calcula99</b><br> <p class="descricao-projeto">Simulador de precificação de corridas coletando e tratando o input do usuário</p><br></div>
+              <div class="swiper-slide"><a href="https://projeto-crud-swart.vercel.app/"><img class="swiper-img" src='./img/crud.png'/> </a><br> <b class="titulo-projeto">Sistema de Inventário</b> <br><p class="descricao-projeto"> Sistema CRUD para manipulação de dados em formato JSON, com armazenamento no Local Storage do navegador.</p> <br></div>
+              <div class="swiper-slide"><a href="https://lista-compras-sigma.vercel.app/"><img class="swiper-img" src='./img/listadecompras.png'/></a><br> <b class="titulo-projeto">Lista de Compras</b> <br><p class="descricao-projeto"> Lista de compras onde é possível adicionar itens, aumentar quantidades e salvar a lista por impressão responsivo.</p><br></div>
+              <div class="swiper-slide"><a href="https://mychampionspicks.vercel.app/"><img class="swiper-img" src='./img/mychampionspicks.png'/></a><br> <b class="titulo-projeto">My Champion Picks</b> <br> <p class="descricao-projeto">Aplicativo em React.JS onde é consumida uma API que recupera os campeões digitados, com sugestão automática conforme input do usuário.</p><br></div>
+              <div class="swiper-slide"><a href="https://palindromo-eight.vercel.app/"><img class="swiper-img" src='./img/palindromo.png'/></a><br> <b class="titulo-projeto">Desafio Palíndromo</b> <br> <p class="descricao-projeto">Aplicativo em JavaScript que utiliza métodos de array para verificar se as frases inseridas são palíndromas ou não.</p><br></div>
+              <div class="swiper-slide"><a href="https://superhero-battler.vercel.app/"><img class="swiper-img"  src='./img/superherobattler.png'/></a><br><b class="titulo-projeto">SuperHero Battler</b><br><p class="descricao-projeto"> Consumo de API para verificação de nível de poder de heróis, comparando o mais poderoso.</p> <br></div>
+              <div class="swiper-slide"><a href="./dotlink.html"><img class="swiper-img"  src='./img/dotlink.jpg'/></a><br><b class="titulo-projeto">Dotlink</b><br><p class="descricao-projeto">Projeto de responsividade de elementos utilizando JavaScript</p><br></div>
+            </div>
+            <br>
+            <div class="swiper-pagination"></div>
+
+
+            
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+    </article>
+
+  </main>
+
+  <footer class="footer-contato">
+    <h1 class="conteudo-titulo" id="contato">Contato</h1>
+    <section class="footer-grid">
+      <div class="footer-esquerdo">
+        <p class="footer-email">ruan.mprado@gmail.com</p>
+        <p class="footer-numero">+55 (19) 97103 7972
+        </p>
+      </div>
+      <div class="footer-direito">
+         <div class="flex-icons">
+          <a href="https://www.linkedin.com/in/ruan-melo-006337241/" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn" class="footer-icon"></a>
+          <a href="https://www.salesforce.com/trailblazer/ruanmelo" target="_blank"><img src="img/salesforce.svg" alt="Salesforce" class="footer-icon"></a>
+        </div>
+        
+      </div>
+
+    </section>
+
+
+  </footer>
+
+  <script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+  
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+});
+  </script>
+
+</body>
+
+</html>

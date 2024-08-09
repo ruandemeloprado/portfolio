@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .arrastavel {
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      position: absolute;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 100px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .verde {
+      background-color: #4CAF50;
+    }
+
+    .azul {
+      background-color: #2196F3;
+    }
+
+    svg {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="blocoVerde" class="arrastavel verde" draggable="true" ondragstart="arrastar(event)" ondblclick="criarLinha(event)"></div>
+  <div id="blocoAzul" class="arrastavel azul" draggable="true" ondragstart="arrastar(event)" ondblclick="criarLinha(event)"></div>
+
+  <!-- São iniciadas as funções arrastar() e criarLinha() nas div's dos quadrados -->
+
+  <script>
+    let blocoSelecionado = null;
+    let linha = null;
+    let svg = null;
+
+    function arrastar(eventoDeArrastar) {
+      eventoDeArrastar.dataTransfer.setData("text", eventoDeArrastar.target.id);
+    }
+
+    /* A função arrastar executa o método data.Transfer.setData no evento recebido como parâmetro. Essa função é própria da API Drag and Drop do HTML, e evita bugs ao
+    arrastar os elementos. */
+
+    document.addEventListener("drop", function (eventoDeArrastar) {
+
+      const data = eventoDeArrastar.dataTransfer.getData("text");
+      const elementoArrastado = document.getElementById(data);
+      elementoArrastado.style.left = (eventoDeArrastar.clientX - elementoArrastado.clientWidth / 2) + "px";
+      elementoArrastado.style.top = (eventoDeArrastar.clientY - elementoArrastado.clientHeight / 2) + "px";
+
+      if (linha) {
+        atualizarPosicaoLinha(document.getElementById("blocoVerde"), document.getElementById("blocoAzul"));
+      }
+    });
+
+    /* É calculada a nova posição do elemento arrastado na página após o usuário soltar o elemento. Ele verifica se a linha já existe, e ela já existir, ele executa a 
+    função para atualizar sua posição novamente nas duas pontas. */
+
+    function criarLinha(eventoDeClique) {
+      const blocoClicado = eventoDeClique.target;
+      if (!blocoSelecionado) {
+        blocoSelecionado = blocoClicado;
+        blocoSelecionado.style.border = "solid 2px black"
+        blocoSelecionado.style.boxShadow = "0 0 10px #999999"
+      } else {
+        svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("width", "100%");
+        svg.setAttribute("height", "100%");
+        svg.setAttribute("style", "pointer-events: none; position: absolute; top: 0; left: 0;");
+
+        linha = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        linha.setAttribute("stroke", "black");
+        linha.setAttribute("stroke-width", "2");
+
+        svg.appendChild(linha);
+        document.body.appendChild(svg);
+
+        atualizarPosicaoLinha(blocoSelecionado, blocoClicado);
+        blocoSelecionado.style.border = "none"
+        blocoSelecionado.style.boxShadow = "none"
+        blocoSelecionado = null;
+      }
+    }
+
+    /* A função criar linha verifica se a vaíável blocoSelecionado está vazia, caso esteja, ela define o bloco clicado recebido pelo evento como o valor da variável 
+    blocoSelecionado.*/
+    /* Caso a variável blocoSelecionado já possua um valor, é criado o svg que preenche toda a página e a linha que conectará as duas divs, e depois ela executa a função 
+    atualizarPosicaoLinha, onde é definida a posição da linha para iniciar no centro do primeiro quadrado clicado, e terminar no centro do segundo quadrado clicado. */
+
+    function atualizarPosicaoLinha(blocoInicio, blocoFim) {
+      const inicioEixoX = blocoInicio.offsetLeft + blocoInicio.clientWidth / 2;
+      const inicioEixoY = blocoInicio.offsetTop + blocoInicio.clientHeight / 2;
+      const fimEixoX = blocoFim.offsetLeft + blocoFim.clientWidth / 2;
+      const fimEixoY = blocoFim.offsetTop + blocoFim.clientHeight / 2;
+
+      linha.setAttribute("x1", inicioEixoX);
+      linha.setAttribute("y1", inicioEixoY);
+      linha.setAttribute("x2", fimEixoX);
+      linha.setAttribute("y2", fimEixoY);
+    }
+    /*São calculados o início da linha no eixo horizontal do svg, e também no eixo vertical, para que fiquem ao centro dos quadrados. O cálculo é a largura do quadrado / 2,
+    para encontrar o centro.*/
+
+    document.addEventListener("dragover", function (eventoDeArrastar) {
+      eventoDeArrastar.preventDefault();
+    });
+    /*É utilizado o preventDefault em eventos de dragover, para evitar bugs em eventos de colisão dos dois quadrados. */
+
+
+   
+
+    document.addEventListener("mousemove", function (eventoDeClique) {
+      if (blocoSelecionado && linha) {
+        atualizarPosicaoLinha(blocoSelecionado, document.getElementById("blocoAzul"));
+      }
+    });
+    /* Esse eventListener verifica se o primeiro bloco já foi selecionado, e se a linha existe, caso ocorra, ele atualiza a posição da linha. */
+
+</script>
+
+
+</body>
+
+</html>

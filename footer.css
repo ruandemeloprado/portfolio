@@ -1,0 +1,92 @@
+.footer-contato h1 {
+  color: #f3f3f3;
+  text-align: center;
+  margin-bottom: 6.5rem;
+  padding-top: 3.75rem;
+}
+
+.footer-contato h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("./img/Rectangle272.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 145px;
+  left: 655px;
+}
+
+.footer-contato {
+  background: #676767;
+  position: relative;
+}
+
+.footer-contato::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("./img/Group7.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 90px;
+  left: 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer-esquerdo {
+  display: grid;
+  color: #f3f3f3;
+  font-size: 2rem;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  gap: 1.8rem;
+  padding-bottom: 4.3rem;
+  justify-self: end;
+}
+
+.footer-amizade {
+  display: grid;
+  text-align: left;
+
+  max-width: 35ch;
+  margin-bottom: 4rem;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  color: #f3f3f3;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: 0.3px;
+}
+
+.footer-direito {
+  justify-content: center;
+  display: grid;
+}
+
+.footer-icon {
+  padding-bottom: 0.4rem;
+  display: block;
+  height: 3rem;
+}
+
+.flex-icons {
+  display: flex;
+  gap: 20px;
+}
+
+
+.footer-direito a {
+  display: grid;
+  place-self: start;
+}
+
+@media (min-width: 200px) and (max-width: 1000px) {
+  .footer-contato h1::before {
+    left: 263px;
+  }
+}
