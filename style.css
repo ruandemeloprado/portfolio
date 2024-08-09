@@ -21,6 +21,12 @@ html {
   margin-bottom: 6.5rem;
   padding-top: 3.75rem;
 }
+.descricao-projeto{
+  color: #313131;
+  font-size: 1.75rem;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
 
 .conteudo-sobre {
   background: #eaeaea;
