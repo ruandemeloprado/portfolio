@@ -12,6 +12,15 @@ html {
   max-width: 100%;
   scroll-behavior: smooth;
 }
+.titulo-projeto{
+  color: #141414;
+  font-size: 3.65rem;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 6.5rem;
+  padding-top: 3.75rem;
+}
 
 .conteudo-sobre {
   background: #eaeaea;
@@ -174,6 +183,14 @@ html {
   }
   .projeto-titulo{
     font-size: 3.2rem;
+  }
+  .titulo-projeto{
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .descricao-projeto{
+    padding-top: 2rem;
   }
   .conteudo-titulo{
     font-size: 3.2rem;
